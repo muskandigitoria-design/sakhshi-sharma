@@ -1,177 +1,211 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sakshi Sharma | Free Stock Market Insights on Telegram</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakshi Sharma | Free Telegram Channel</title>
 
-  <!-- SEO -->
-  <meta name="description" content="Join 63K+ traders getting free daily Nifty & BankNifty levels, market analysis, and educational content with 5+ years experience." />
-  <meta name="author" content="Sakshi Sharma" />
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Sakshi Sharma | Free Stock Market Insights" />
-  <meta property="og:description" content="Get daily stock market updates & education — 100% free on Telegram." />
-  <meta property="og:type" content="website" />
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+body{
+  min-height:100vh;
+  background:radial-gradient(circle at top,#0f2a2a,#050b0f 70%);
+  display:flex;
+  justify-content:center;
+  color:#fff;
+}
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+.container{
+  width:100%;
+  max-width:420px;
+  padding:30px 20px 120px;
+  text-align:center;
+}
 
-    body {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #ffffff;
-      text-align: center;
-      padding: 20px;
-    }
+/* LIVE badge */
+.live{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 14px;
+  border-radius:50px;
+  background:#0b3a2f;
+  color:#20f0a8;
+  font-size:13px;
+  margin-bottom:20px;
+}
 
-    .container {
-      background: rgba(0,0,0,0.45);
-      max-width: 420px;
-      width: 100%;
-      padding: 40px 30px;
-      border-radius: 18px;
-      box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-      backdrop-filter: blur(10px);
-      animation: fadeUp 1s ease;
-    }
+.live span{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#20f0a8;
+  box-shadow:0 0 10px #20f0a8;
+}
 
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(30px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
+/* Avatar */
+.avatar{
+  width:120px;
+  height:120px;
+  border-radius:50%;
+  border:4px solid #20f0a8;
+  margin:10px auto;
+  overflow:hidden;
+}
 
-    .avatar {
-      width: 110px;
-      height: 110px;
-      border-radius: 50%;
-      border: 3px solid #00e0ff;
-      margin-bottom: 15px;
-      object-fit: cover;
-    }
+.avatar img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
 
-    h1 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-bottom: 6px;
-    }
+/* Name */
+h1{
+  font-size:26px;
+  margin-top:15px;
+}
 
-    .tagline {
-      font-size: 14px;
-      opacity: 0.85;
-      margin-bottom: 20px;
-    }
+.role{
+  font-size:14px;
+  opacity:.8;
+  margin-bottom:10px;
+}
 
-    .points {
-      font-size: 14px;
-      line-height: 1.7;
-      color: #c9f6ff;
-      margin-bottom: 26px;
-    }
+/* Rating */
+.rating{
+  color:#ffc107;
+  font-size:18px;
+  margin-bottom:25px;
+}
 
-    .btn {
-      display: inline-block;
-      padding: 14px 30px;
-      background: linear-gradient(135deg, #00e0ff, #00bcd4);
-      color: #000;
-      font-weight: 600;
-      border-radius: 50px;
-      text-decoration: none;
-      box-shadow: 0 12px 30px rgba(0,224,255,0.45);
-      transition: all 0.3s ease;
-    }
+/* Stats */
+.stats{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-bottom:30px;
+}
 
-    .btn:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 18px 40px rgba(0,224,255,0.7);
-    }
+.stat{
+  background:#0c1f1f;
+  border-radius:14px;
+  padding:14px 8px;
+  font-size:13px;
+}
 
-    .footer {
-      margin-top: 22px;
-      font-size: 12px;
-      opacity: 0.75;
-    }
+.stat b{
+  display:block;
+  font-size:18px;
+  color:#20f0a8;
+}
 
-    .credit {
-      margin-top: 10px;
-      font-size: 12px;
-      opacity: 0.7;
-    }
+/* Join Button */
+.join-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  background:#20f0a8;
+  color:#002b20;
+  font-weight:600;
+  padding:16px;
+  border-radius:14px;
+  text-decoration:none;
+  font-size:16px;
+  box-shadow:0 0 25px rgba(32,240,168,.6);
+  transition:.3s;
+}
 
-    .credit a {
-      color: #00e0ff;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.join-btn:hover{
+  transform:translateY(-3px);
+}
 
-    .credit a:hover {
-      text-decoration: underline;
-    }
-  </style>
+/* Text section */
+.text{
+  margin-top:25px;
+}
+
+.text h2{
+  font-size:18px;
+  margin-bottom:10px;
+}
+
+.text p{
+  font-size:14px;
+  opacity:.8;
+  line-height:1.6;
+}
+
+/* Credit */
+.credit{
+  position:fixed;
+  bottom:15px;
+  width:100%;
+  text-align:center;
+  font-size:12px;
+  opacity:.7;
+}
+
+.credit a{
+  color:#20f0a8;
+  text-decoration:none;
+}
+</style>
 </head>
 
 <body>
 
-  <div class="container">
-    <!-- Optional image (can remove if you want) -->
-    <img 
-      src="https://i.imgur.com/8Km9tLL.png" 
-      alt="Sakshi Sharma"
-      class="avatar"
-    />
+<div class="container">
 
-    <h1>Sakshi Sharma</h1>
-    <div class="tagline">Stock Market Educator & Trader</div>
-
-    <div class="points">
-      ✅ 63,000+ Telegram Traders<br>
-      ✅ 5+ Years Market Experience<br>
-      ✅ Daily Nifty & BankNifty Levels<br>
-      ✅ Educational & Risk-Aware Content
-    </div>
-
-    <!-- TELEGRAM BUTTON -->
-    <a 
-      href="https://t.me/sakshisharmapvtt"
-      target="_blank"
-      class="btn"
-      id="joinTelegram"
-    >
-      🚀 Join Free Telegram Channel
-    </a>
-
-    <div class="footer">
-      100% Free • No Paid Tips • Education First
-    </div>
-
-    <!-- CREDIT LINE -->
-    <div class="credit">
-      Ads managed by 
-      <a 
-        href="https://telegram.me/+TRlJl628l-FkMWE9"
-        target="_blank"
-      >
-        nexgroww_agency
-      </a>
-    </div>
+  <div class="live">
+    <span></span> LIVE • 847 traders online now
   </div>
 
-  <script>
-    document.getElementById("joinTelegram").addEventListener("click", function () {
-      console.log("Telegram Join Button Clicked");
-    });
-  </script>
+  <div class="avatar">
+    <img src="https://i.imgur.com/8Km9tLL.png" alt="Sakshi Sharma">
+  </div>
+
+  <h1>Sakshi Sharma</h1>
+  <div class="role">Stock Market Educator & Analyst</div>
+
+  <div class="rating">★★★★★ <span style="font-size:14px;opacity:.7">(4.9/5 rating)</span></div>
+
+  <div class="stats">
+    <div class="stat"><b>91K+</b>Subscribers</div>
+    <div class="stat"><b>5+ Yrs</b>Experience</div>
+    <div class="stat"><b>100%</b>Free Access</div>
+  </div>
+
+  <!-- JOIN BUTTON -->
+  <a href="https://t.me/sakshisharmapvtt" target="_blank" class="join-btn">
+    ✈️ Join Free Telegram Channel
+  </a>
+
+  <div class="text">
+    <h2>Personal Loss Recovery — 100% Trusted Channel</h2>
+    <p>
+      Join thousands of traders receiving free market updates,
+      analysis, and educational content daily.
+    </p>
+  </div>
+
+</div>
+
+<!-- CREDIT LINE -->
+<div class="credit">
+  Ads managed by 
+  <a href="https://telegram.me/+TRlJl628l-FkMWE9" target="_blank">
+    nexgroww agency
+  </a>
+</div>
 
 </body>
 </html>
