@@ -26,7 +26,7 @@ body{
 .container{
   width:100%;
   max-width:420px;
-  padding:30px 20px 120px;
+  padding:30px 20px 160px;
   text-align:center;
 }
 
@@ -128,9 +128,63 @@ h1{
   transform:translateY(-3px);
 }
 
-/* Text section */
-.text{
+/* Section heading */
+.section-title{
+  margin:35px 0 18px;
+  font-size:18px;
+  opacity:.9;
+}
+
+/* Testimonials */
+.testimonials{
+  display:grid;
+  gap:14px;
+}
+
+.testimonial{
+  background:#0c1f1f;
+  border-radius:14px;
+  padding:16px;
+  text-align:left;
+  font-size:14px;
+}
+
+.testimonial .stars{
+  color:#ffc107;
+  margin-bottom:8px;
+}
+
+.testimonial .name{
+  margin-top:8px;
+  font-size:13px;
+  opacity:.7;
+}
+
+/* Features */
+.features{
   margin-top:25px;
+  display:grid;
+  gap:12px;
+}
+
+.feature{
+  background:#0c1f1f;
+  padding:14px;
+  border-radius:14px;
+  font-size:14px;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.feature span{
+  color:#20f0a8;
+  font-size:18px;
+}
+
+/* Bottom text */
+.text{
+  margin-top:30px;
 }
 
 .text h2{
@@ -189,6 +243,44 @@ h1{
     ✈️ Join Free Telegram Channel
   </a>
 
+  <!-- TESTIMONIALS -->
+  <div class="section-title">What Our Members Say</div>
+
+  <div class="testimonials">
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      “Finally found a genuine channel. The daily tips are gold!”
+      <div class="name">— Priya S.</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      “Very transparent and educational. Perfect for beginners.”
+      <div class="name">— Amit K.</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      “Best free Telegram channel for Nifty & BankNifty levels.”
+      <div class="name">— Rohit M.</div>
+    </div>
+
+    <div class="testimonial">
+      <div class="stars">★★★★★</div>
+      “No fake promises, only learning and discipline.”
+      <div class="name">— Neha P.</div>
+    </div>
+  </div>
+
+  <!-- FEATURES -->
+  <div class="features">
+    <div class="feature"><span>✔</span> Daily Nifty & BankNifty Levels</div>
+    <div class="feature"><span>✔</span> Start Investing with ₹500</div>
+    <div class="feature"><span>✔</span> 5+ Years of Market Experience</div>
+    <div class="feature"><span>✔</span> 63,000+ Subscribers Trust Us Already</div>
+  </div>
+
+  <!-- FINAL TEXT -->
   <div class="text">
     <h2>Personal Loss Recovery — 100% Trusted Channel</h2>
     <p>
