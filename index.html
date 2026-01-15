@@ -20,11 +20,11 @@ body{
 .container{
   width:100%;
   max-width:430px;
-  padding:30px 18px 160px;
+  padding:30px 18px 60px;
   text-align:center;
 }
 
-/* live */
+/* LIVE */
 .live{
   display:inline-flex;
   gap:8px;
@@ -36,25 +36,46 @@ body{
   margin-bottom:18px;
 }
 .live span{
-  width:10px;height:10px;border-radius:50%;
-  background:#20f0a8;box-shadow:0 0 10px #20f0a8;
+  width:9px;height:9px;border-radius:50%;
+  background:#20f0a8;
 }
 
-/* avatar */
+/* Avatar */
+.avatar-wrap{
+  position:relative;
+  width:120px;
+  margin:10px auto;
+}
 .avatar{
   width:120px;height:120px;
   border-radius:50%;
-  border:4px solid #20f0a8;
-  margin:10px auto;
+  border:3px solid #20f0a8;
   overflow:hidden;
 }
 .avatar img{width:100%;height:100%;object-fit:cover}
 
-h1{font-size:26px;margin-top:15px}
+/* Tick */
+.tick{
+  position:absolute;
+  bottom:6px;
+  right:6px;
+  background:#20f0a8;
+  color:#003b2a;
+  font-size:12px;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+
+h1{font-size:26px;margin-top:12px}
 .role{font-size:14px;opacity:.8}
 .rating{color:#ffc107;margin:10px 0 25px}
 
-/* stats */
+/* Stats */
 .stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
@@ -69,7 +90,7 @@ h1{font-size:26px;margin-top:15px}
 }
 .stat b{display:block;color:#20f0a8;font-size:18px}
 
-/* join */
+/* Join button */
 .join-btn{
   display:flex;
   justify-content:center;
@@ -82,32 +103,29 @@ h1{font-size:26px;margin-top:15px}
   font-weight:600;
   text-decoration:none;
   font-size:16px;
-  box-shadow:0 0 25px rgba(32,240,168,.6);
 }
 
-/* info */
-.info{
-  margin:30px 0;
-}
-.info h2{font-size:18px;margin-bottom:8px}
+/* Info */
+.info{margin:28px 0}
+.info h2{font-size:18px;margin-bottom:6px}
 .info p{font-size:14px;opacity:.8}
 
-/* joined */
+/* Joined */
 .joined{
   background:#0c1f1f;
   padding:14px;
   border-radius:14px;
-  margin:25px 0;
+  margin:22px 0;
   font-size:14px;
 }
 .joined span{color:#20f0a8;font-weight:600}
 
-/* badges */
+/* Badges */
 .badges{
   display:grid;
   grid-template-columns:1fr 1fr;
   gap:10px;
-  margin-bottom:30px;
+  margin-bottom:28px;
 }
 .badge{
   background:#0c1f1f;
@@ -116,28 +134,29 @@ h1{font-size:26px;margin-top:15px}
   font-size:13px;
 }
 
-/* testimonials */
+/* Testimonials */
 .section-title{
-  margin:20px 0;
+  margin:22px 0;
   font-size:18px;
 }
 
+/* Horizontal scroll */
 .testimonials{
-  height:180px;
   overflow:hidden;
-  position:relative;
+  width:100%;
 }
 .testimonial-track{
-  display:grid;
+  display:flex;
   gap:14px;
-  animation:scroll 20s linear infinite;
+  animation:scrollX 25s linear infinite;
 }
-@keyframes scroll{
-  0%{transform:translateY(0)}
-  100%{transform:translateY(-50%)}
+@keyframes scrollX{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
 }
 
 .testimonial{
+  min-width:260px;
   background:#0c1f1f;
   padding:14px;
   border-radius:14px;
@@ -147,7 +166,7 @@ h1{font-size:26px;margin-top:15px}
 .stars{color:#ffc107;margin-bottom:6px}
 .name{font-size:13px;opacity:.7;margin-top:6px}
 
-/* features */
+/* Features */
 .features{
   margin-top:30px;
   display:grid;
@@ -163,11 +182,9 @@ h1{font-size:26px;margin-top:15px}
 }
 .feature span{color:#20f0a8}
 
-/* credit */
+/* Credit (NOT sticky) */
 .credit{
-  position:fixed;
-  bottom:15px;
-  width:100%;
+  margin:30px 0 10px;
   text-align:center;
   font-size:12px;
   opacity:.7;
@@ -182,8 +199,11 @@ h1{font-size:26px;margin-top:15px}
 
   <div class="live"><span></span> LIVE • 847 traders online now</div>
 
-  <div class="avatar">
-    <img src=https://my-tel-hub.lovable.app/assets/profile-photo-D9-nZjRw.jpg">
+  <div class="avatar-wrap">
+    <div class="avatar">
+      <img src="https://my-tel-hub.lovable.app/assets/profile-photo-D9-nZjRw.jpg">
+    </div>
+    <div class="tick">✓</div>
   </div>
 
   <h1>Sakshi Sharma</h1>
@@ -221,12 +241,12 @@ h1{font-size:26px;margin-top:15px}
 
   <div class="testimonials">
     <div class="testimonial-track">
-      <div class="testimonial"><div class="stars">★★★★★</div>Recovered my losses in just 3 months! Best decision I ever made.<div class="name">— Rahul M.</div></div>
-      <div class="testimonial"><div class="stars">★★★★★</div>Finally found a genuine channel. The daily tips are gold!<div class="name">— Priya S.</div></div>
-      <div class="testimonial"><div class="stars">★★★★★</div>Transparent analysis, no hidden charges. Highly recommended!<div class="name">— Amit K.</div></div>
-      <div class="testimonial"><div class="stars">★★★★★</div>Lost hope after market crash, but this channel helped me bounce back!<div class="name">— Neha R.</div></div>
-      <div class="testimonial"><div class="stars">★★★★★</div>Professional guidance and timely updates. Worth every minute!<div class="name">— Vikram P.</div></div>
-      <div class="testimonial"><div class="stars">★★★★★</div>My portfolio is finally in green. Thank you for the amazing support!<div class="name">— Sneha D.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Recovered my losses in just 3 months!<div class="name">— Rahul M.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Daily tips are pure gold.<div class="name">— Priya S.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>No hidden charges. Honest guidance.<div class="name">— Amit K.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Helped me recover after crash.<div class="name">— Neha R.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Professional & timely updates.<div class="name">— Vikram P.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Portfolio finally in green!<div class="name">— Sneha D.</div></div>
     </div>
   </div>
 
@@ -237,10 +257,10 @@ h1{font-size:26px;margin-top:15px}
     <div class="feature"><span>✔</span> 63,000+ Subscribers Trust Us Already</div>
   </div>
 
-</div>
+  <div class="credit">
+    Ads managed by <a href="https://telegram.me/+TRlJl628l-FkMWE9" target="_blank">nexgroww agency</a>
+  </div>
 
-<div class="credit">
-  Ads managed by <a href="https://telegram.me/+TRlJl628l-FkMWE9" target="_blank">nexgroww agency</a>
 </div>
 
 </body>
