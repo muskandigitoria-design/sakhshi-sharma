@@ -8,106 +8,68 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
 
 body{
-  min-height:100vh;
   background:radial-gradient(circle at top,#0f2a2a,#050b0f 70%);
+  color:#fff;
   display:flex;
   justify-content:center;
-  color:#fff;
 }
 
 .container{
   width:100%;
-  max-width:420px;
-  padding:30px 20px 160px;
+  max-width:430px;
+  padding:30px 18px 160px;
   text-align:center;
 }
 
-/* LIVE badge */
+/* live */
 .live{
   display:inline-flex;
-  align-items:center;
   gap:8px;
   padding:6px 14px;
-  border-radius:50px;
   background:#0b3a2f;
   color:#20f0a8;
+  border-radius:50px;
   font-size:13px;
-  margin-bottom:20px;
+  margin-bottom:18px;
 }
-
 .live span{
-  width:10px;
-  height:10px;
-  border-radius:50%;
-  background:#20f0a8;
-  box-shadow:0 0 10px #20f0a8;
+  width:10px;height:10px;border-radius:50%;
+  background:#20f0a8;box-shadow:0 0 10px #20f0a8;
 }
 
-/* Avatar */
+/* avatar */
 .avatar{
-  width:120px;
-  height:120px;
+  width:120px;height:120px;
   border-radius:50%;
   border:4px solid #20f0a8;
   margin:10px auto;
   overflow:hidden;
 }
+.avatar img{width:100%;height:100%;object-fit:cover}
 
-.avatar img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-}
+h1{font-size:26px;margin-top:15px}
+.role{font-size:14px;opacity:.8}
+.rating{color:#ffc107;margin:10px 0 25px}
 
-/* Name */
-h1{
-  font-size:26px;
-  margin-top:15px;
-}
-
-.role{
-  font-size:14px;
-  opacity:.8;
-  margin-bottom:10px;
-}
-
-/* Rating */
-.rating{
-  color:#ffc107;
-  font-size:18px;
-  margin-bottom:25px;
-}
-
-/* Stats */
+/* stats */
 .stats{
   display:grid;
   grid-template-columns:repeat(3,1fr);
-  gap:12px;
-  margin-bottom:30px;
+  gap:10px;
+  margin-bottom:25px;
 }
-
 .stat{
   background:#0c1f1f;
+  padding:12px;
   border-radius:14px;
-  padding:14px 8px;
   font-size:13px;
 }
+.stat b{display:block;color:#20f0a8;font-size:18px}
 
-.stat b{
-  display:block;
-  font-size:18px;
-  color:#20f0a8;
-}
-
-/* Join Button */
+/* join */
 .join-btn{
   display:flex;
   justify-content:center;
@@ -115,90 +77,93 @@ h1{
   gap:10px;
   background:#20f0a8;
   color:#002b20;
-  font-weight:600;
   padding:16px;
   border-radius:14px;
+  font-weight:600;
   text-decoration:none;
   font-size:16px;
   box-shadow:0 0 25px rgba(32,240,168,.6);
-  transition:.3s;
 }
 
-.join-btn:hover{
-  transform:translateY(-3px);
+/* info */
+.info{
+  margin:30px 0;
+}
+.info h2{font-size:18px;margin-bottom:8px}
+.info p{font-size:14px;opacity:.8}
+
+/* joined */
+.joined{
+  background:#0c1f1f;
+  padding:14px;
+  border-radius:14px;
+  margin:25px 0;
+  font-size:14px;
+}
+.joined span{color:#20f0a8;font-weight:600}
+
+/* badges */
+.badges{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:10px;
+  margin-bottom:30px;
+}
+.badge{
+  background:#0c1f1f;
+  padding:12px;
+  border-radius:14px;
+  font-size:13px;
 }
 
-/* Section heading */
+/* testimonials */
 .section-title{
-  margin:35px 0 18px;
+  margin:20px 0;
   font-size:18px;
-  opacity:.9;
 }
 
-/* Testimonials */
 .testimonials{
+  height:180px;
+  overflow:hidden;
+  position:relative;
+}
+.testimonial-track{
   display:grid;
   gap:14px;
+  animation:scroll 20s linear infinite;
+}
+@keyframes scroll{
+  0%{transform:translateY(0)}
+  100%{transform:translateY(-50%)}
 }
 
 .testimonial{
   background:#0c1f1f;
+  padding:14px;
   border-radius:14px;
-  padding:16px;
-  text-align:left;
   font-size:14px;
+  text-align:left;
 }
+.stars{color:#ffc107;margin-bottom:6px}
+.name{font-size:13px;opacity:.7;margin-top:6px}
 
-.testimonial .stars{
-  color:#ffc107;
-  margin-bottom:8px;
-}
-
-.testimonial .name{
-  margin-top:8px;
-  font-size:13px;
-  opacity:.7;
-}
-
-/* Features */
+/* features */
 .features{
-  margin-top:25px;
+  margin-top:30px;
   display:grid;
   gap:12px;
 }
-
 .feature{
   background:#0c1f1f;
   padding:14px;
   border-radius:14px;
   font-size:14px;
   display:flex;
-  align-items:center;
   gap:10px;
 }
+.feature span{color:#20f0a8}
 
-.feature span{
-  color:#20f0a8;
-  font-size:18px;
-}
-
-/* Bottom text */
-.text{
-  margin-top:30px;
-}
-
-.text h2{
-  font-size:18px;
-  margin-bottom:10px;
-}
-
-.text p{
-  font-size:14px;
-  opacity:.8;
-  line-height:1.6;
-}
-
-/* Credit */
+/* credit */
 .credit{
   position:fixed;
   bottom:15px;
@@ -207,11 +172,7 @@ h1{
   font-size:12px;
   opacity:.7;
 }
-
-.credit a{
-  color:#20f0a8;
-  text-decoration:none;
-}
+.credit a{color:#20f0a8;text-decoration:none}
 </style>
 </head>
 
@@ -219,60 +180,56 @@ h1{
 
 <div class="container">
 
-  <div class="live">
-    <span></span> LIVE • 847 traders online now
-  </div>
+  <div class="live"><span></span> LIVE • 847 traders online now</div>
 
   <div class="avatar">
-    <img src="https://i.imgur.com/8Km9tLL.png" alt="Sakshi Sharma">
+    <img src="https://i.imgur.com/8Km9tLL.png">
   </div>
 
   <h1>Sakshi Sharma</h1>
   <div class="role">Stock Market Educator & Analyst</div>
-
-  <div class="rating">★★★★★ <span style="font-size:14px;opacity:.7">(4.9/5 rating)</span></div>
+  <div class="rating">★★★★★ (4.9/5 rating)</div>
 
   <div class="stats">
     <div class="stat"><b>91K+</b>Subscribers</div>
     <div class="stat"><b>5+ Yrs</b>Experience</div>
-    <div class="stat"><b>100%</b>Free Access</div>
+    <div class="stat"><b>100%</b>Free</div>
   </div>
 
-  <!-- JOIN BUTTON -->
   <a href="https://t.me/sakshisharmapvtt" target="_blank" class="join-btn">
     ✈️ Join Free Telegram Channel
   </a>
 
-  <!-- TESTIMONIALS -->
+  <div class="info">
+    <h2>Personal Loss Recovery — 100% Trusted Channel, Join WhatsApp</h2>
+    <p>Join thousands of traders receiving free market updates, analysis, and educational content daily.</p>
+  </div>
+
+  <div class="joined">
+    <span>1589</span> people joined today! <br>
+    • Limited time: <span>100% FREE access</span>
+  </div>
+
+  <div class="badges">
+    <div class="badge">✔ 100% Verified</div>
+    <div class="badge">✔ Trusted by 50K+</div>
+    <div class="badge">⭐ 4.9★ Rated</div>
+    <div class="badge">👥 Active Community</div>
+  </div>
+
   <div class="section-title">What Our Members Say</div>
 
   <div class="testimonials">
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      “Finally found a genuine channel. The daily tips are gold!”
-      <div class="name">— Priya S.</div>
-    </div>
-
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      “Very transparent and educational. Perfect for beginners.”
-      <div class="name">— Amit K.</div>
-    </div>
-
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      “Best free Telegram channel for Nifty & BankNifty levels.”
-      <div class="name">— Rohit M.</div>
-    </div>
-
-    <div class="testimonial">
-      <div class="stars">★★★★★</div>
-      “No fake promises, only learning and discipline.”
-      <div class="name">— Neha P.</div>
+    <div class="testimonial-track">
+      <div class="testimonial"><div class="stars">★★★★★</div>Recovered my losses in just 3 months! Best decision I ever made.<div class="name">— Rahul M.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Finally found a genuine channel. The daily tips are gold!<div class="name">— Priya S.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Transparent analysis, no hidden charges. Highly recommended!<div class="name">— Amit K.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Lost hope after market crash, but this channel helped me bounce back!<div class="name">— Neha R.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>Professional guidance and timely updates. Worth every minute!<div class="name">— Vikram P.</div></div>
+      <div class="testimonial"><div class="stars">★★★★★</div>My portfolio is finally in green. Thank you for the amazing support!<div class="name">— Sneha D.</div></div>
     </div>
   </div>
 
-  <!-- FEATURES -->
   <div class="features">
     <div class="feature"><span>✔</span> Daily Nifty & BankNifty Levels</div>
     <div class="feature"><span>✔</span> Start Investing with ₹500</div>
@@ -280,23 +237,10 @@ h1{
     <div class="feature"><span>✔</span> 63,000+ Subscribers Trust Us Already</div>
   </div>
 
-  <!-- FINAL TEXT -->
-  <div class="text">
-    <h2>Personal Loss Recovery — 100% Trusted Channel</h2>
-    <p>
-      Join thousands of traders receiving free market updates,
-      analysis, and educational content daily.
-    </p>
-  </div>
-
 </div>
 
-<!-- CREDIT LINE -->
 <div class="credit">
-  Ads managed by 
-  <a href="https://telegram.me/+TRlJl628l-FkMWE9" target="_blank">
-    nexgroww agency
-  </a>
+  Ads managed by <a href="https://telegram.me/+TRlJl628l-FkMWE9" target="_blank">nexgroww agency</a>
 </div>
 
 </body>
